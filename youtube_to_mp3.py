@@ -1,15 +1,19 @@
 import yt_dlp
 import os
 from typing import List
+from utils import Config
 
-def download_youtube_to_mp3(urls: List[str], output_dir: str = "output"):
+def download_youtube_to_mp3(urls: List[str], output_dir: str = None):
     """
     Download YouTube videos as MP3 files from a list of URLs.
     
     Args:
         urls: List of YouTube URLs to download
-        output_dir: Directory to save the MP3 files (default: "output")
+        output_dir: Directory to save the MP3 files (default: Config.OUTPUT_DIR)
     """
+    if output_dir is None:
+        output_dir = str(Config.OUTPUT_DIR)
+    
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
     

@@ -86,8 +86,11 @@ def extract_track_info(url):
         }
 
 def main():
+    from utils import Config
+    Config.ensure_dirs()
+    
     # Read URLs from tracklist.txt
-    with open('data/tracklist.txt', 'r') as file:
+    with open(Config.TRACKLIST_TXT, 'r') as file:
         urls = [line.strip() for line in file if line.strip()]
     
     print(f"Found {len(urls)} tracks to process")
@@ -114,22 +117,27 @@ def main():
         print(f"    URL: {track['url']}")
         print()
     
-    # Save to CSV
-    with open('data/extracted_tracks.csv', 'w', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['track_number', 'title', 'artist', 'duration', 'url']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        
-        writer.writeheader()
-        for i, track in enumerate(tracks, 1):
-            writer.writerow({
-                'track_number': i,
-                'title': track['title'],
-                'artist': track['artist'],
-                'duration': track['duration'],
-                'url': track['url']
-            })
+    # Save to JSON using utils
+    from utils import Config, FileManager, Track
+    Config.ensure_dirs()
     
-    print(f"Results saved to data/extracted_tracks.csv")
+    # Convert to Track objects
+    track_objects = []
+    for i, track in enumerate(tracks, 1):
+        track_obj = Track(
+            track_number=i,
+            title=track['title'],
+            artist=track['artist'],
+            duration=track['duration'],
+            url=track['url'],
+            source='beatport'
+        )
+        track_objects.append(track_obj)
+    
+    # Save using FileManager
+    FileManager.save_tracks_json(track_objects, Config.EXTRACTED_TRACKS_JSON)
+    
+    print(f"Results saved to {Config.EXTRACTED_TRACKS_JSON}")
 
 if __name__ == "__main__":
     main()
