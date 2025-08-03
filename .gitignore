@@ -1,0 +1,38 @@
+# Output files - MP3s can be large and are generated content
+output/
+*.mp3
+*.webm
+*.mp4
+
+# Log files
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Personal data files (optional - uncomment if you don't want to commit data)
+# *.csv
+# *.json

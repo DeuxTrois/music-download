@@ -1,0 +1,11 @@
+track_number,title,artist,duration,source,youtube_url,youtube_title,youtube_duration,youtube_channel,duration_match,duration_difference,search_query
+1,Savana,Chris Lake,2:30,spotify,https://www.youtube.com/watch?v=1XJvPIZVn5M,Use Code “Anurika14” to get discounts on savana !!,0:10,Anurika das,False,140,Savana
+2,Lipstick,Alaia & Gallo,3:02,spotify,https://www.youtube.com/watch?v=LMqDMH4JQMY,Kungs - Lipstick,3:01,KUNGS,True,1,Lipstick
+3,Selection,NO SIGNE,2:45,spotify,https://www.youtube.com/watch?v=R36CixkIaIc,George Baker Selection Una Paloma Blanca,3:27,Rob de Groot,False,42,Selection
+4,Bright Lights,"Castion, Krozz",2:36,spotify,https://www.youtube.com/watch?v=Uu0PFviob5w,Bright Lights,3:32,Billy Crawford - Topic,False,56,Bright Lights
+5,Night Moves,"Joshwa, Enzo is Burning",3:22,spotify,https://www.youtube.com/watch?v=xH7cSSKnkL4,Bob Seger & The Silver Bullet Band - Night Moves (Official Video),4:27,Bob Seger,False,65,Night Moves
+6,5 AM (feat. K. Flay),"SomethingALaMode, K.Flay",3:36,spotify,https://www.youtube.com/watch?v=vSf_3skrafI,5 AM (feat. K. Flay),3:36,Something A La Mode - Topic,True,0,5 AM (feat. K. Flay)
+7,Let You In (feat. East Forest),"ANNA, East Forest",5:56,spotify,https://www.youtube.com/watch?v=Tz5vLR20Sn4,"ANNA, East Forest - Let You In (Visualiser)",5:57,ANNA,True,1,Let You In (feat. East Forest)
+8,La Danse de Forêt,Peyruis,1:43,spotify,https://www.youtube.com/watch?v=4ki78E0fZFY,Peyruis feat. Josiane Pichet - La Danse de Forêt,1:43,Peyruis,True,0,La Danse de Forêt
+9,Kalash Hyperpop,Veridis Project,3:59,spotify,https://www.youtube.com/watch?v=AIu8lZHVvkQ,Kalash Hyperpop- Veridis Project [LIENS],3:55,merluzine,True,4,Kalash Hyperpop
+10,Vois sur ton chemin,John Revox,3:30,spotify,https://www.youtube.com/watch?v=ZIIT9hO1EZE,BENNETT – Vois sur ton chemin (Techno Mix) [Official Live Visualizer],2:58,Spinnin' Records,False,32,Vois sur ton chemin
