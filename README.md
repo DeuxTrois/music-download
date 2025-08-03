@@ -8,6 +8,7 @@ A Python-based tool for extracting track metadata from Beatport and Spotify, fin
 - **YouTube Search**: Find matching YouTube videos with duration verification
 - **MP3 Download**: Convert YouTube videos to high-quality MP3 files
 - **Dual Source Support**: Works with both Beatport and Spotify track lists
+- **Centralized Configuration**: Unified data structures and shared utilities
 - **Error Handling**: Robust error handling with detailed logging
 
 ## Workflow
@@ -23,9 +24,8 @@ A Python-based tool for extracting track metadata from Beatport and Spotify, fin
 - `youtube_search.py` - Searches YouTube for tracks and verifies duration matches
 - `youtube_to_mp3.py` - Downloads YouTube videos and converts to MP3
 - `spotify_youtube_search.py` - YouTube search for Spotify tracks
-
-### Batch Download Script
 - `download_tracks.py` - Unified script for downloading tracks from either source
+- `utils.py` - Shared utilities, data structures, and configuration
 
 ## Data Files
 
