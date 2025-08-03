@@ -87,7 +87,7 @@ def extract_track_info(url):
 
 def main():
     # Read URLs from tracklist.txt
-    with open('tracklist.txt', 'r') as file:
+    with open('data/tracklist.txt', 'r') as file:
         urls = [line.strip() for line in file if line.strip()]
     
     print(f"Found {len(urls)} tracks to process")
@@ -115,7 +115,7 @@ def main():
         print()
     
     # Save to CSV
-    with open('extracted_tracks.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('data/extracted_tracks.csv', 'w', newline='', encoding='utf-8') as csvfile:
         fieldnames = ['track_number', 'title', 'artist', 'duration', 'url']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         
@@ -129,7 +129,7 @@ def main():
                 'url': track['url']
             })
     
-    print(f"Results saved to extracted_tracks.csv")
+    print(f"Results saved to data/extracted_tracks.csv")
 
 if __name__ == "__main__":
     main()

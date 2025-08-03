@@ -150,7 +150,7 @@ def search_youtube_track(title, artist, target_duration):
 
 def main():
     # Load extracted tracks
-    with open('extracted_tracks.json', 'r', encoding='utf-8') as file:
+    with open('data/extracted_tracks.json', 'r', encoding='utf-8') as file:
         tracks = json.load(file)
     
     print(f"Processing {len(tracks)} tracks...")
@@ -195,12 +195,12 @@ def main():
         time.sleep(1)
     
     # Save results
-    with open('tracks_with_youtube.json', 'w', encoding='utf-8') as file:
+    with open('data/tracks_with_youtube.json', 'w', encoding='utf-8') as file:
         json.dump(enhanced_tracks, file, indent=2, ensure_ascii=False)
     
     # Save CSV version
     import csv
-    with open('tracks_with_youtube.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('data/tracks_with_youtube.csv', 'w', newline='', encoding='utf-8') as csvfile:
         fieldnames = [
             'track_number', 'title', 'artist', 'duration', 'url',
             'youtube_url', 'youtube_title', 'youtube_duration', 'youtube_channel',
@@ -219,8 +219,8 @@ def main():
     print(f"Successful duration matches: {successful_matches}")
     print(f"Match rate: {successful_matches/len(tracks)*100:.1f}%")
     print(f"\nResults saved to:")
-    print(f"- tracks_with_youtube.json")
-    print(f"- tracks_with_youtube.csv")
+    print(f"- data/tracks_with_youtube.json")
+    print(f"- data/tracks_with_youtube.csv")
 
 if __name__ == "__main__":
     main()

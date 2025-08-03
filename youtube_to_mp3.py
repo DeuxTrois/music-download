@@ -49,10 +49,15 @@ def download_youtube_to_mp3(urls: List[str], output_dir: str = "output"):
             print(f"  {url}: {error}")
 
 if __name__ == "__main__":
-    # Fix the failed Spotify track URL by removing extra 'h'
-    youtube_urls = [
-        'https://www.youtube.com/watch?v=sm2g2axBJQ0',  # Fixed URL
+    # Example usage
+    example_urls = [
+        'https://www.youtube.com/watch?v=dQw4w9WgXcQ',  # Example URL
     ]
     
-    # Download all URLs to MP3
-    download_youtube_to_mp3(youtube_urls)
+    print("This is the core download function.")
+    print("Use 'python download_tracks.py beatport' or 'python download_tracks.py spotify' for batch downloads.")
+    print("\nExample usage:")
+    print("download_youtube_to_mp3(['https://www.youtube.com/watch?v=...'])")
+    
+    # Uncomment to test with example URL
+    # download_youtube_to_mp3(example_urls)

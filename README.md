@@ -24,20 +24,19 @@ A Python-based tool for extracting track metadata from Beatport and Spotify, fin
 - `youtube_to_mp3.py` - Downloads YouTube videos and converts to MP3
 - `spotify_youtube_search.py` - YouTube search for Spotify tracks
 
-### Batch Download Scripts
-- `download_all_tracks.py` - Downloads all tracks from Beatport tracklist
-- `download_spotify_tracks.py` - Downloads all tracks from Spotify tracklist
+### Batch Download Script
+- `download_tracks.py` - Unified script for downloading tracks from either source
 
 ## Data Files
 
 ### Input
-- `tracklist.txt` - List of Beatport URLs
-- `spotify_track.csv` - Spotify track list
+- `data/tracklist.txt` - List of Beatport URLs
+- `data/spotify_track.csv` - Spotify track list
 
 ### Generated Data
-- `extracted_tracks.csv/json` - Extracted Beatport track metadata
-- `tracks_with_youtube.csv/json` - Beatport tracks with YouTube matches
-- `spotify_tracks_with_youtube.csv/json` - Spotify tracks with YouTube matches
+- `data/extracted_tracks.json` - Extracted Beatport track metadata
+- `data/tracks_with_youtube.json` - Beatport tracks with YouTube matches
+- `data/spotify_tracks_with_youtube.json` - Spotify tracks with YouTube matches
 
 ### Output
 - `output/` - Downloaded MP3 files
@@ -60,9 +59,13 @@ pip install yt-dlp requests beautifulsoup4
    python youtube_search.py
    ```
 
-3. **Download all tracks**:
+3. **Download tracks**:
    ```bash
-   python download_all_tracks.py
+   # For Beatport tracks
+   python download_tracks.py beatport
+   
+   # For Spotify tracks  
+   python download_tracks.py spotify
    ```
 
 ## Features
@@ -75,6 +78,6 @@ pip install yt-dlp requests beautifulsoup4
 ## Notes
 
 - MP3 files are saved with 192kbps quality
-- Original track metadata is preserved in CSV/JSON format
+- Original track metadata is preserved in JSON format
 - Failed downloads are logged with error details
 - YouTube URLs are validated before download

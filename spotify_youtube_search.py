@@ -76,11 +76,11 @@ def main():
         time.sleep(1)
     
     # Save results
-    with open('spotify_tracks_with_youtube.json', 'w', encoding='utf-8') as file:
+    with open('data/spotify_tracks_with_youtube.json', 'w', encoding='utf-8') as file:
         json.dump(enhanced_tracks, file, indent=2, ensure_ascii=False)
     
     # Save CSV version
-    with open('spotify_tracks_with_youtube.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('data/spotify_tracks_with_youtube.csv', 'w', newline='', encoding='utf-8') as csvfile:
         fieldnames = [
             'track_number', 'title', 'artist', 'duration', 'source',
             'youtube_url', 'youtube_title', 'youtube_duration', 'youtube_channel',
@@ -99,8 +99,8 @@ def main():
     print(f"Successful duration matches: {successful_matches}")
     print(f"Match rate: {successful_matches/len(spotify_tracks)*100:.1f}%")
     print(f"\nResults saved to:")
-    print(f"- spotify_tracks_with_youtube.json")
-    print(f"- spotify_tracks_with_youtube.csv")
+    print(f"- data/spotify_tracks_with_youtube.json")
+    print(f"- data/spotify_tracks_with_youtube.csv")
 
 if __name__ == "__main__":
     main()
